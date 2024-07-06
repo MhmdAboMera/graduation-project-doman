@@ -11,7 +11,7 @@ function SubjectDetails() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://gradprojectapp.runasp.net/api/Subject/${subjectId}`)
+    fetch(`https://gradprojectapp.runasp.net/api/Subject/${subjectId}`)
       .then((res) => res.json())
       .then((data) => setSubject(data))
       .catch((err) => setError(err.message));

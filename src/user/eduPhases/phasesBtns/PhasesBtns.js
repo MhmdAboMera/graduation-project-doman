@@ -15,14 +15,14 @@ function PhasesBtns({ onButtonClick }) {
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    fetch("http://gradprojectapp.runasp.net/api/Phase")
+    fetch("https://gradprojectapp.runasp.net/api/Phase")
       .then((res) => res.json())
       .then((data) => setPhasesData(data));
   }, []);
 
   const getPhase = (phaseId) => {
     if (isLoggedIn) {
-      fetch(`http://gradprojectapp.runasp.net/api/Phase/${phaseId}`)
+      fetch(`https://gradprojectapp.runasp.net/api/Phase/${phaseId}`)
         .then((res) => res.json())
         .then((data) => {
           setPhase(data);

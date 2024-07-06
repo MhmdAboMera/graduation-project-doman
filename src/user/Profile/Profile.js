@@ -10,7 +10,7 @@ function Profile() {
 
     useEffect(() => {
         if (userId) {
-            fetch(`http://gradprojectapp.runasp.net/api/User/DashBoard/${userId}`)
+            fetch(`https://gradprojectapp.runasp.net/api/User/DashBoard/${userId}`)
                 .then(res => res.json())
                 .then(data => setProfileInfo(data))
                 .catch(err => console.error("Error fetching profile data:", err));

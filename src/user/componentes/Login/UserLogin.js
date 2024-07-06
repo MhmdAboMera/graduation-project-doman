@@ -44,7 +44,7 @@ function UserLogin({ setActiveTab }) {
 
     try {
       const response = await axios.post(
-        "http://gradprojectapp.runasp.net/api/Auth/token",
+        "https://gradprojectapp.runasp.net/api/Auth/token",
         {
           email,
           password,

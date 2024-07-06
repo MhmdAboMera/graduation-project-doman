@@ -12,12 +12,12 @@ function PrimaryPhase() {
   const [selectedSemester, setSelectedSemester] = useState(null);
   const [level, setLevel] = useState([]);
   const getLevel = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Level/${LevelId}`)
+    fetch(`https://gradprojectapp.runasp.net/api/Level/${LevelId}`)
       .then((res) => res.json())
       .then((data) => setLevel(data.semesters));
   };
   const getSubjects = (semesterId) => {
-    fetch(`http://gradprojectapp.runasp.net/api/Semester/${semesterId}`)
+    fetch(`https://gradprojectapp.runasp.net/api/Semester/${semesterId}`)
       .then((res) => res.json())
       .then((data) => setSubjects(data.subjects));
   };

@@ -8,7 +8,7 @@ function Slider() {
   }, []);
 
   const getTeachers = () => {
-    fetch("http://gradprojectapp.runasp.net/api/User/GetAllTeachers")
+    fetch("https://gradprojectapp.runasp.net/api/User/GetAllTeachers")
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   };

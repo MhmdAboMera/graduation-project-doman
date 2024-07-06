@@ -41,7 +41,7 @@ const FeedBack = () => {
         }
 
         try {
-            const response = await Axios.post('http://gradprojectapp.runasp.net/api/FeedBack', {
+            const response = await Axios.post('https://gradprojectapp.runasp.net/api/FeedBack', {
                 message,
                 rate,
                 userId,
@@ -64,7 +64,7 @@ const FeedBack = () => {
     };
 
     const getFeedbacks = () => {
-        fetch("http://gradprojectapp.runasp.net/api/FeedBack")
+        fetch("https://gradprojectapp.runasp.net/api/FeedBack")
             .then((res) => res.json())
             .then((data) => setFeedbacks(data))
             .catch((error) => console.error("Error fetching feedbacks:", error));

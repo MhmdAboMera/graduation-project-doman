@@ -52,7 +52,7 @@ const Registration = () => {
 
         try {
             const response = await axios.post(
-                `http://gradprojectapp.runasp.net/api/Auth/register`,
+                `https://gradprojectapp.runasp.net/api/Auth/register`,
                 formData
                 
             );

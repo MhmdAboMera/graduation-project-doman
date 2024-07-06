@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function Stages() {
   const [phasesData, setPhasesData] = useState([]);
   useEffect(() => {
-    fetch("http://gradprojectapp.runasp.net/api/Phase")
+    fetch("https://gradprojectapp.runasp.net/api/Phase")
       .then((res) => res.json())
       .then((data) => setPhasesData(data));
 
