@@ -108,7 +108,8 @@ function Slider() {
                 >
                   <div className={`${styles.boxImg}`}>
                     <img
-                      src={teacher.imageFile}
+                      src={`https://via.placeholder.com/225`}
+                      // src={teacher.imageFile}
                       alt={teacher.userName}
                       className={styles.imageContainer}
                     />
