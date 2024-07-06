@@ -34,11 +34,11 @@ function SubjectDetails() {
         <div className={`${styles.txt3} row`}>
           <section className={`${styles.course} py-5`}>
             <div className="row justify-content-center mb-4">
-              <div className={`col-lg-6 ${styles.container3}`}>
+              <div className={`col-lg-4 ${styles.container3}`}>
                 <p className={styles.p3}>{subject.name}</p>
                 <p className={styles.description}>{subject.description}</p>
               </div>
-              <div className={`col-lg-6 ${styles.image1}`}>
+              <div className={`col-lg-8 ${styles.image1}`}>
                 <img
                   src={subject.imageUrl}
                   alt={subject.name}

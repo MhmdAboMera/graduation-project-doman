@@ -8,6 +8,7 @@ function Teacher(props) {
     getTeachers();
   }, []);
 
+  console.log(teachers);
   const getTeachers = () => {
     fetch("https://gradprojectapp.runasp.net/api/User/GetAllTeachers")
       .then((res) => res.json())
@@ -96,7 +97,9 @@ function Teacher(props) {
                     alt={teacher.userName}
                     className={styles.imageContainer}
                   />
-                  <p>{teacher.userName}</p>
+                  <p>
+                    أ : {teacher.firstName} {teacher.lastName}
+                  </p>
                   <button
                     className={`${styles.Starting} btn btn-primary shadow`}
                   >

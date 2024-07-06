@@ -106,11 +106,13 @@ function Slider() {
                   key={index}
                   className={`${styles.slide} col-md-9 col-sm-12`}
                 >
-                  <img
-                    src={teacher.imageFile}
-                    alt={teacher.userName}
-                    className={styles.imageContainer}
-                  />
+                  <div className={`${styles.boxImg}`}>
+                    <img
+                      src={teacher.imageFile}
+                      alt={teacher.userName}
+                      className={styles.imageContainer}
+                    />
+                  </div>
                   <p>{teacher.userName}</p>
                   <button
                     className={`${styles.Starting} btn btn-primary shadow`}

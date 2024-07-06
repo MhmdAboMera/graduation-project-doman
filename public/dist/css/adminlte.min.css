@@ -53097,3 +53097,8 @@ footer.main-footer {
 textarea {
 height: 38px !important;
 }
+.nav-sidebar .nav-treeview {
+    display: block !important;
+    list-style: none !important;
+    padding: 0 !important;
+}
