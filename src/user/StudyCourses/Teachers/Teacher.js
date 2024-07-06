@@ -93,7 +93,8 @@ function Teacher(props) {
                   className={`${styles.slide} col-md-9 col-sm-12`}
                 >
                   <img
-                    src={teacher.imageFile}
+                    src={`https://via.placeholder.com/225`}
+                    // src={teacher.imageFile}
                     alt={teacher.userName}
                     className={styles.imageContainer}
                   />
