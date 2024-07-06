@@ -16,13 +16,13 @@ function Semester() {
   const [levelId, setlevelId] = useState(0);
   const [photo, setPhoto] = useState("");
   const getAllLevels = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Level`)
+    fetch(`https://gradprojectapp.runasp.net/api/Level`)
       .then((res) => res.json())
       .then((data) => setLevels(data));
   };
   console.log(allSemesters);
   const getAllSemesters = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Semester`)
+    fetch(`https://gradprojectapp.runasp.net/api/Semester`)
       .then((res) => res.json())
       .then((data) => setAllSemesters(data));
   };
@@ -33,7 +33,7 @@ function Semester() {
     formData.append("levelId", levelId);
     formData.append("imageFile", photo);
     axios
-      .post(`http://gradprojectapp.runasp.net/api/Semester`, formData)
+      .post(`https://gradprojectapp.runasp.net/api/Semester`, formData)
       .then((data) => {
         getAllSemesters();
       });
@@ -51,7 +51,7 @@ function Semester() {
       showCancelButton: true,
     }).then((data) => {
       if (data.isConfirmed) {
-        // fetch(`http://localhost:5141/api/Level/${oneClass.id}`, {
+        // fetch(`https://localhost:5141/api/Level/${oneClass.id}`, {
         //   method: "DELETE",
         // })
         //   .then((res) => res.json())
@@ -60,7 +60,7 @@ function Semester() {
         //   });
         axios
           .delete(
-            `http://gradprojectapp.runasp.net/api/Semester/${oneClass.id}`
+            `https://gradprojectapp.runasp.net/api/Semester/${oneClass.id}`
           )
           .then((res) => {
             getAllSemesters();

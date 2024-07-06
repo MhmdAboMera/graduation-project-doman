@@ -17,13 +17,13 @@ function AddClass() {
   const [stageId, setStageId] = useState(0);
 
   const getAllStages = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Phase`)
+    fetch(`https://gradprojectapp.runasp.net/api/Phase`)
       .then((res) => res.json())
       .then((data) => setStages(data));
   };
   // console.log(stages);
   const getAllClass = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Level`)
+    fetch(`https://gradprojectapp.runasp.net/api/Level`)
       .then((res) => res.json())
       .then((data) => setAllClass(data));
   };
@@ -34,7 +34,7 @@ function AddClass() {
     formData.append("name", name);
     formData.append("phaseId", stageId);
     formData.append("imageFile", photo);
-    axios.post(`http://gradprojectapp.runasp.net/api/Level`, formData).then((data) => {
+    axios.post(`https://gradprojectapp.runasp.net/api/Level`, formData).then((data) => {
       getAllClass();
     });
     nameInput.current.value = "";
@@ -51,7 +51,7 @@ function AddClass() {
       showCancelButton: true,
     }).then((data) => {
       if (data.isConfirmed) {
-        // fetch(`http://localhost:5141/api/Level/${oneClass.id}`, {
+        // fetch(`https://localhost:5141/api/Level/${oneClass.id}`, {
         //   method: "DELETE",
         // })
         //   .then((res) => res.json())
@@ -59,7 +59,7 @@ function AddClass() {
         //     getAllClass();
         //   });
         axios
-          .delete(`http://gradprojectapp.runasp.net/api/Level/${oneClass.id}`)
+          .delete(`https://gradprojectapp.runasp.net/api/Level/${oneClass.id}`)
           .then((res) => {
             getAllClass();
             console.log("Level deleted successfully:", res.data);

@@ -26,7 +26,7 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios
-        .post("http://gradprojectapp.runasp.net/api/Auth/token", {
+        .post("https://gradprojectapp.runasp.net/api/Auth/token", {
           email,
           password,
         })

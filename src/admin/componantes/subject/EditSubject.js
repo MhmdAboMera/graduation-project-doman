@@ -20,13 +20,13 @@ function EditSubject() {
   const [semesterId, setSemesterId] = useState(0);
   console.log("subjectId" + subjectId);
   const getAllSemesters = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Semester`)
+    fetch(`https://gradprojectapp.runasp.net/api/Semester`)
       .then((res) => res.json())
       .then((data) => setAllSemesters(data));
   };
   useEffect(() => {
     axios
-      .get(`http://gradprojectapp.runasp.net/api/Subject/${subjectId}`)
+      .get(`https://gradprojectapp.runasp.net/api/Subject/${subjectId}`)
       .then((data) => {
         nameInput.current.value = data.data.name;
         desInput.current.value = data.data.description;
@@ -47,7 +47,7 @@ function EditSubject() {
     formData.append("imageFile", photo);
     axios
       .put(
-        `http://gradprojectapp.runasp.net/api/Subject/${subjectId}`,
+        `https://gradprojectapp.runasp.net/api/Subject/${subjectId}`,
         formData
       )
       .then((response) => {

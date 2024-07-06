@@ -13,12 +13,12 @@ function AddTeacherToSubject() {
   console.log("AllSubjects", AllSubjects);
   console.log("teachers", teachers);
   const getAllSubjects = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Subject`)
+    fetch(`https://gradprojectapp.runasp.net/api/Subject`)
       .then((res) => res.json())
       .then((data) => setAllSubjects(data));
   };
   const getAllTeachers = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/User/GetAllTeachers`)
+    fetch(`https://gradprojectapp.runasp.net/api/User/GetAllTeachers`)
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   };
@@ -29,7 +29,7 @@ function AddTeacherToSubject() {
   const formSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://gradprojectapp.runasp.net/api/SubjectTeacher`, {
+      .post(`https://gradprojectapp.runasp.net/api/SubjectTeacher`, {
         userID: teacherId,
         subjectID: subjectId,
       })

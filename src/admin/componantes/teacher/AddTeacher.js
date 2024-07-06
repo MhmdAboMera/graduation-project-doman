@@ -27,7 +27,7 @@ function AddTeacher() {
     getAllTeachers();
   }, []);
   const getAllTeachers = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/User/GetAllTeachers`)
+    fetch(`https://gradprojectapp.runasp.net/api/User/GetAllTeachers`)
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   };
@@ -43,7 +43,7 @@ function AddTeacher() {
 
     axios
       .post(
-        `http://gradprojectapp.runasp.net/api/Auth/register/teacher`,
+        `https://gradprojectapp.runasp.net/api/Auth/register/teacher`,
         formData
       )
       .then((data) => {
@@ -64,7 +64,7 @@ function AddTeacher() {
       showCancelButton: true,
     }).then((data) => {
       if (data.isConfirmed) {
-        fetch(`http://gradprojectapp.runasp.net/api/User/${teacher.userId}`, {
+        fetch(`https://gradprojectapp.runasp.net/api/User/${teacher.userId}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

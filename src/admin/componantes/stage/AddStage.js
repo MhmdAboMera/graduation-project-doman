@@ -14,7 +14,7 @@ function Stage() {
   const photoInput = useRef();
   // http://localhost:9000/stage
   const getAllStages = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Phase`)
+    fetch(`https://gradprojectapp.runasp.net/api/Phase`)
       .then((res) => res.json())
       .then((data) => setStages(data));
   };
@@ -29,7 +29,7 @@ function Stage() {
     }).then((data) => {
       if (data.isConfirmed) {
         axios
-          .delete(`http://gradprojectapp.runasp.net/api/Phase/${stages.id}`)
+          .delete(`https://gradprojectapp.runasp.net/api/Phase/${stages.id}`)
           .then((res) => {
             getAllStages();
             console.log("Level deleted successfully:", res.data);
@@ -45,7 +45,7 @@ function Stage() {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("imageFile", photo);
-    axios.post(`http://gradprojectapp.runasp.net/api/Phase`, formData).then((data) => {
+    axios.post(`https://gradprojectapp.runasp.net/api/Phase`, formData).then((data) => {
       getAllStages();
     });
     nameInput.current.value = "";

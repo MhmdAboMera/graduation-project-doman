@@ -17,7 +17,7 @@ function EditClass() {
   let navigate = useNavigate();
 
   const getAllStages = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Phase`)
+    fetch(`https://gradprojectapp.runasp.net/api/Phase`)
       .then((res) => res.json())
       .then((data) => setStages(data));
   };
@@ -25,7 +25,7 @@ function EditClass() {
   //   getAllStages();
   // }, []);
   useEffect(() => {
-    axios.get(`http://gradprojectapp.runasp.net/api/Level/${classId}`).then((data) => {
+    axios.get(`https://gradprojectapp.runasp.net/api/Level/${classId}`).then((data) => {
       nameInput.current.value = data.data.name;
       // selectInput.current.value = data.data.phaseName;
       // photoInput.current.value = data.data.imageFile;
@@ -40,7 +40,7 @@ function EditClass() {
     formData.append("phaseId", stageId);
     formData.append("imageFile", photo);
     axios
-      .put(`http://gradprojectapp.runasp.net/api/Level/${classId}`, formData)
+      .put(`https://gradprojectapp.runasp.net/api/Level/${classId}`, formData)
       .then((data) => {
         navigate(`/admin/add-class`);
       });

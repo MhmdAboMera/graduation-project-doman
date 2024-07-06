@@ -26,12 +26,12 @@ function AddData() {
   const PdfSummary = useRef();
   const PdfQuestions = useRef();
   const getAllSubjects = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Subject`)
+    fetch(`https://gradprojectapp.runasp.net/api/Subject`)
       .then((res) => res.json())
       .then((data) => setAllSubjects(data));
   };
   const getAllTeachers = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/User/GetAllTeachers`)
+    fetch(`https://gradprojectapp.runasp.net/api/User/GetAllTeachers`)
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   };
@@ -52,7 +52,7 @@ function AddData() {
     formData.append("PdfQuestions", pdfQuestions);
 
     axios
-      .post(`http://gradprojectapp.runasp.net/api/Chapter`, formData)
+      .post(`https://gradprojectapp.runasp.net/api/Chapter`, formData)
       .then((data) => {
         getAllSubjects();
         console.log(data);
@@ -67,7 +67,7 @@ function AddData() {
       showCancelButton: true,
     }).then((data) => {
       if (data.isConfirmed) {
-        fetch(`http://gradprojectapp.runasp.net/api/Subject/${subject.id}`, {
+        fetch(`https://gradprojectapp.runasp.net/api/Subject/${subject.id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

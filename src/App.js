@@ -1,6 +1,6 @@
 import { Navigate, Route, Router, Routes, useLocation } from "react-router-dom";
 import React, { useState, useEffect, useContext } from "react";
-import { AuthProvider } from './context/AuthContext'; 
+import { AuthProvider } from "./context/AuthContext";
 
 // User Componats
 import About from "./user/about/About";
@@ -47,134 +47,134 @@ function App() {
   const [isUser, setIsUser] = useState(true);
   return (
     <AuthProvider>
-    <ILogin.Provider value={setIsAdmin}>
-      <IsLogin.Provider value={setIsUser}>
-        <div className="App wrapper main">
-          <ScrollToTopOnPageChange />
-          <Routes>
-            <Route path="/">
-              <Route path="UserLogin" element={<UserLogin />} />
-              <Route
-                path="/"
-                element={
-                  <>
-                    <NavHeader />
-                    <Home />
-                    <Footer />
-                  </>
-                }
-              />
-              <Route
-                path="/home"
-                element={
-                  <>
-                    <NavHeader />
-                    <Home />
-                    <Footer />
-                  </>
-                }
-              />
-              <Route
-                path="/about"
-                element={
-                  <>
-                    <NavHeader />
-                    <About />
-                    <Footer />
-                  </>
-                }
-              />
-              <Route
-                path="/eduPhases"
-                element={
-                  isUser ? (
+      <ILogin.Provider value={setIsAdmin}>
+        <IsLogin.Provider value={setIsUser}>
+          <div className="App wrapper main">
+            <ScrollToTopOnPageChange />
+            <Routes>
+              <Route path="/">
+                <Route path="UserLogin" element={<UserLogin />} />
+                <Route
+                  path="/"
+                  element={
                     <>
                       <NavHeader />
-                      <EduPhases />
+                      <Home />
                       <Footer />
                     </>
-                  ) : (
-                    <Navigate to="/UserLogin" />
-                  )
-                }
-              />
-              <Route
-                path="/semester/:LevelId"
-                element={
-                  isUser ? (
+                  }
+                />
+                <Route
+                  path="/home"
+                  element={
                     <>
                       <NavHeader />
-                      <PrimaryPhase />
+                      <Home />
                       <Footer />
                     </>
-                  ) : (
-                    <Navigate to="/UserLogin" />
-                  )
-                }
-              />
-              <Route
-                path="/SubjectDetails/:subjectId"
-                element={
-                  isUser ? (
+                  }
+                />
+                <Route
+                  path="/about"
+                  element={
                     <>
                       <NavHeader />
-                      <SubjectDetails />
+                      <About />
                       <Footer />
                     </>
-                  ) : (
-                    <Navigate to="/UserLogin" />
-                  )
-                }
-              />
-              <Route
-                path="/Contact"
-                element={
-                  <>
-                    <NavHeader />
-                    <Contact />
-                    <Footer />
-                  </>
-                }
-              />
-              <Route
-                path="/Portfolio"
-                element={
-                  <>
-                    <NavHeader />
-                    <Portfolio />
-                    <Footer />
-                  </>
-                }
-              />
-              <Route
-                path="/Policy"
-                element={
-                  isUser ? (
+                  }
+                />
+                <Route
+                  path="/eduPhases"
+                  element={
+                    isUser ? (
+                      <>
+                        <NavHeader />
+                        <EduPhases />
+                        <Footer />
+                      </>
+                    ) : (
+                      <Navigate to="/UserLogin" />
+                    )
+                  }
+                />
+                <Route
+                  path="/semester/:LevelId"
+                  element={
+                    isUser ? (
+                      <>
+                        <NavHeader />
+                        <PrimaryPhase />
+                        <Footer />
+                      </>
+                    ) : (
+                      <Navigate to="/UserLogin" />
+                    )
+                  }
+                />
+                <Route
+                  path="/SubjectDetails/:subjectId"
+                  element={
+                    isUser ? (
+                      <>
+                        <NavHeader />
+                        <SubjectDetails />
+                        <Footer />
+                      </>
+                    ) : (
+                      <Navigate to="/UserLogin" />
+                    )
+                  }
+                />
+                <Route
+                  path="/Contact"
+                  element={
                     <>
                       <NavHeader />
-                      <Policy />
+                      <Contact />
                       <Footer />
                     </>
-                  ) : (
-                    <Navigate to="/UserLogin" />
-                  )
-                }
-              />
-              <Route
-                path="/Profile"
-                element={
-                  isUser ? (
+                  }
+                />
+                <Route
+                  path="/Portfolio"
+                  element={
                     <>
                       <NavHeader />
-                      <Profile />
+                      <Portfolio />
                       <Footer />
                     </>
-                  ) : (
-                    <Navigate to="/UserLogin" />
-                  )
-                }
-              />
-            </Route>
+                  }
+                />
+                <Route
+                  path="/Policy"
+                  element={
+                    isUser ? (
+                      <>
+                        <NavHeader />
+                        <Policy />
+                        <Footer />
+                      </>
+                    ) : (
+                      <Navigate to="/UserLogin" />
+                    )
+                  }
+                />
+                <Route
+                  path="/Profile"
+                  element={
+                    isUser ? (
+                      <>
+                        <NavHeader />
+                        <Profile />
+                        <Footer />
+                      </>
+                    ) : (
+                      <Navigate to="/UserLogin" />
+                    )
+                  }
+                />
+              </Route>
 
               <Route path="/admin">
                 <Route path="" element={<Login />} />
@@ -367,7 +367,6 @@ function App() {
         </IsLogin.Provider>
       </ILogin.Provider>
     </AuthProvider>
-
   );
 }
 

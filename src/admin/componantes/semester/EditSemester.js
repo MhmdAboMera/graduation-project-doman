@@ -17,7 +17,7 @@ function EditSemester() {
   let navigate = useNavigate();
 
   const getAllLevels = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Level`)
+    fetch(`https://gradprojectapp.runasp.net/api/Level`)
       .then((res) => res.json())
       .then((data) => setLevels(data));
   };
@@ -26,7 +26,7 @@ function EditSemester() {
   // }, []);
   useEffect(() => {
     axios
-      .get(`http://gradprojectapp.runasp.net/api/Semester/${semesterId}`)
+      .get(`https://gradprojectapp.runasp.net/api/Semester/${semesterId}`)
       .then((data) => {
         nameInput.current.value = data.data.name;
         // selectInput.current.value = data.data.levelName;
@@ -41,7 +41,10 @@ function EditSemester() {
     formData.append("levelId", levelId);
     formData.append("imageFile", photo);
     axios
-      .put(`http://gradprojectapp.runasp.net/api/Semester/${semesterId}`, formData)
+      .put(
+        `https://gradprojectapp.runasp.net/api/Semester/${semesterId}`,
+        formData
+      )
       .then((data) => {
         navigate(`/admin/add-semester`);
       });

@@ -13,7 +13,7 @@ function Role() {
   const formSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://gradprojectapp.runasp.net/api/Role`, {
+      .post(`https://gradprojectapp.runasp.net/api/Role`, {
         name,
       })
       .then((data) => {

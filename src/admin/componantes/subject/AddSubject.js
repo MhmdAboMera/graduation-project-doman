@@ -18,7 +18,7 @@ function AddSubject() {
   const [description, setDescription] = useState("");
   const [semesterId, setSemesterId] = useState(0);
   const getAllSemesters = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Semester`)
+    fetch(`https://gradprojectapp.runasp.net/api/Semester`)
       .then((res) => res.json())
       .then((data) => setAllSemesters(data));
   };
@@ -33,7 +33,7 @@ function AddSubject() {
     formData.append("imageFile", photo);
 
     axios
-      .post(`http://gradprojectapp.runasp.net/api/Subject`, formData)
+      .post(`https://gradprojectapp.runasp.net/api/Subject`, formData)
       .then((data) => {
         getAllSubject();
       });
@@ -43,7 +43,7 @@ function AddSubject() {
     selectInput.current.value = "اختر الترم الدراسي";
   };
   const getAllSubject = () => {
-    fetch(`http://gradprojectapp.runasp.net/api/Subject`)
+    fetch(`https://gradprojectapp.runasp.net/api/Subject`)
       .then((res) => res.json())
       .then((data) => setSubjects(data));
   };
@@ -57,7 +57,7 @@ function AddSubject() {
       showCancelButton: true,
     }).then((data) => {
       if (data.isConfirmed) {
-        fetch(`http://gradprojectapp.runasp.net/api/Subject/${subject.id}`, {
+        fetch(`https://gradprojectapp.runasp.net/api/Subject/${subject.id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

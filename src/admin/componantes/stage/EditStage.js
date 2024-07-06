@@ -13,7 +13,7 @@ function EditStage() {
   const nameInput = useRef();
   let navigate = useNavigate();
   useEffect(() => {
-    axios.get(`http://gradprojectapp.runasp.net/api/Phase/${stageId}`).then((data) => {
+    axios.get(`https://gradprojectapp.runasp.net/api/Phase/${stageId}`).then((data) => {
       nameInput.current.value = data.data.name;
       // photoInput.current.value = data.data.imageFile;
     });
@@ -24,7 +24,7 @@ function EditStage() {
     formData.append("name", name);
     formData.append("imageFile", photo);
     axios
-      .put(`http://gradprojectapp.runasp.net/api/Phase/${stageId}`, formData)
+      .put(`https://gradprojectapp.runasp.net/api/Phase/${stageId}`, formData)
       .then((data) => {
         navigate(`/admin/add-stage`);
       });
