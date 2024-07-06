@@ -1,0 +1,144 @@
+
+.Azaylearning .Contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.paragraph {
+  font-size: calc(1.075rem + .3vw) !important;
+}
+.flex_container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem; 
+  align-items: center;
+  margin-bottom: 1rem; 
+}
+.custom_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.col_3 {
+  flex: 0 0 25%; 
+  max-width: 25%; 
+}
+.col_9 {
+  display: flex;
+  padding-right: 15px;
+  align-items: center;
+  flex: 0 0 75%; 
+  max-width: 75%; 
+}
+.img_fluid {
+  max-width: 100%;
+  height: auto;
+}
+/* .images:hover {
+    animation: moveUpDown 1.5s infinite alternate;
+} */
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    35% {
+        transform: translateY(-50px);
+    }
+    70% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+.cardcontainer {
+  display: flex;
+}
+
+.cardcontainer h4 {
+  margin-top: 0.5rem;
+}
+
+.card {
+  background-color: var(--main-color);
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.card h3 {
+  text-align: right;
+}
+
+.card:hover{
+  color: var(--main-color);
+  background-color: white;
+  transition: 0.5s;
+}
+
+.Containers {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Azaylearning .Containers h2 {
+  text-align: justify;
+  color: #0084F7;
+}
+.learning {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem; 
+  margin-bottom: 1rem; 
+}
+
+.images {
+  max-height: 400px;
+  width: 100% !important;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.col_sm_12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col_md_4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.col_md_8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+@media (max-width: 567px) {
+  .Containers {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+.cardcontainer{
+  flex-direction: column;
+  gap: 10px;
+}
+}

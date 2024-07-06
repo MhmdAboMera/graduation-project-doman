@@ -1,0 +1,273 @@
+.Login {
+    background-image: url('../../../../public/imges/login.gif') !important;
+    position: relative !important;
+    background-size: 100% 100% !important;
+}
+
+.title {
+    color: var(--main-color);
+    margin-bottom: 40px;
+}
+
+.formGroup {
+    position: relative;
+}
+
+.input {
+    padding: 10px 10px 10px 5px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background-color: transparent !important;
+    margin-bottom: 40px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--main-color);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    margin-bottom: 40px;
+}
+
+/* .bar:before {
+    left: 0;
+}
+
+.bar:after {
+    right: 100%;
+} */
+
+.input:focus~.bar:before,
+.input:focus~.bar:after {
+    width: 100% !important;
+}
+
+.forgotPassword {
+    color: var(--main-color);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.forgotPassword:focus {
+    border: 0px;
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.invalidFeedback {
+    display: block;
+    color: red;
+}
+
+.formGroup label {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: .3s;
+}
+
+.input:focus .formGroup label,
+.formGroup .active {
+    top: -20px;
+    color: var(--main-color);
+}
+
+.LoginBtn {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: transparent;
+    color: rgb(61, 106, 255);
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+}
+
+.LoginBtn:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    transition: all 0.2s ease-out;
+    color: white;
+}
+
+.LoginBtn:hover::before {
+    animation: sh02 0.5s 0s linear;
+}
+
+.LoginBtn::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.LoginBtn:active {
+    box-shadow: 0 0 0 0 transparent;
+    border: 1px solid rgb(61, 106, 255) !important;
+    color: rgb(61, 106, 255) !important;
+    transition: box-shadow 0.3s ease-in;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #e8e8e8;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content .heading {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.content .para {
+    line-height: 1.5;
+}
+
+.content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover::before {
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: none;
+}
+
+.card:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+}
+
+.content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+}
+
+.content .btn:active {
+    box-shadow: none;
+}
+
+.tooltip {
+    position: absolute;
+    width: 80px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, var(--main-color) 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-color) transparent;
+    transform: translateX(-50%);
+}
+
+.checkbox {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.checkbox:hover .tooltip {
+    top: 120%;
+    opacity: 1;
+    visibility: visible;
+    background: var(--main-color);
+    transform: translate(-50%, -5px);
+}

@@ -1,0 +1,30 @@
+.container {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, .2);
+    transition: all .2s;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.container:hover {
+    box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+}
+
+.container h1 {
+    color: var(--main-color);
+}
+
+.container p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.container span {
+    color: var(--main-color);
+    font-size: large;
+
+}

@@ -1,0 +1,32 @@
+.Homelanding {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url('../../../images/gehan.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+  }
+  
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-40%, -200%) ;
+    
+  }
+  
+  .title h1 {
+    color: white;
+  }
+  .col_12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 567px) {
+    .Homelanding {
+      height: 200px;
+    }
+  }
+  

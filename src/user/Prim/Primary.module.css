@@ -1,0 +1,44 @@
+.PrimaryPhase {
+  background-image: url("../../../public/imges/pahseBG.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  
+}
+
+.phasesBtns {
+  display: flex;
+  justify-content: space-around;
+}
+.phasesBtns .button {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(41, 134, 254, 1);
+  font-weight: 200px;
+  font-size: 25px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 400px;
+}
+.phasesBtns .button:hover {
+  background-color: var(--yellow);
+  color: white;
+}
+.txt {
+  width: 477px;
+  height: 73px;
+  font-size: 40px;
+  font-weight: 250px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.sub {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}

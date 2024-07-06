@@ -1,0 +1,45 @@
+.stages p {
+    color: var(--main-color);
+
+}
+
+.stages .heading {
+    color: var(--main-color);
+}
+
+.card {
+    margin-top: 100px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.cardContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 15px;
+    border: none;
+    width: 170px;
+    height: 55px;
+    box-shadow: 15px 15px var(--main-color);
+    cursor: pointer;
+    transition: 0.5s ease;
+    background: lightgray;
+    font-size: 18px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    
+}
+
+.cardContent:hover {
+    box-shadow: -15px -15px lightgray;
+    transform: translate(15px, 15px);
+    background: var(--main-color);
+    color: lightgray;
+}
